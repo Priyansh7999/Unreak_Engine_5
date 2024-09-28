@@ -1,0 +1,954 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scrollbar-width: none;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, black, rgb(50, 49, 49), rgb(113, 108, 108));
+}
+.dim_bg{
+    width: 100%;
+    height: 121%;
+    object-fit: cover;
+    position: absolute;
+    transition: opacity 0.5s; /* Smooth opacity transition */
+    opacity: 0.6;
+    z-index: 0;
+}
+.video{
+    width: 100%;
+    height: 110%;
+}
+
+#myVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This will ensure the video covers the whole area */
+}
+
+header{
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+nav{
+    display: flex;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.565);
+    backdrop-filter: blur(8px);
+    width: 100%;
+    align-items: center;
+    display: flex;
+}
+.epic{
+    width: 8vh;
+    margin: 5px;
+    padding: 12px;
+}
+.logo_name{
+    width: 50vh;
+    padding: 2px;
+}
+.nav_list{
+    display: flex;
+    width: 100%;
+    list-style-type: none;
+    align-items: center;
+    gap: 2.5rem;
+    z-index: 1;
+}
+.nav_list li{
+    position: relative;
+    padding: 5px;
+}
+.nav_list li a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+.nav_list li a:hover{
+    color: rgb(179, 147, 147);
+    transition: 0.3s;
+}
+.social{
+    margin: 10px;
+    font-size: 20px;
+    color: aliceblue;
+    display: flex;
+    gap: 30px;
+    cursor: pointer;
+}
+.butt{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.butt .sign_in{
+    width: 40%;
+    height: 2.2rem;
+    color: white;
+    font-size: 90%;
+    border-radius: 8px;
+    background-color: rgba(128, 126, 126, 0.565);
+    backdrop-filter: blur(8px);
+    border: none;
+    cursor: pointer;
+}
+.download{
+    height: 2.2rem;
+    width: 40%;
+    font-size: 90%;
+    color: white;
+    border-radius: 8px;
+    background-color: rgb(30, 116, 245);
+    backdrop-filter: blur(8px);
+    border: none;
+    cursor: pointer;
+}
+.sign_in:hover{
+    background-color: rgba(59, 57, 57, 0.719);
+}
+.download:hover{
+    background-color: blue;
+}
+.search{
+    display: none;
+    position: fixed;
+    margin-left: 50%;
+    margin-top: 70px;
+    padding: 9px;
+    z-index: -1;
+    width: 12rem;
+    border-radius: 20px;
+    height: 2rem;
+    border: none;
+    background-color: transparent;
+    backdrop-filter: blur(8px);
+}
+.U{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.U .logo{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 46%;
+    transition: opacity 1s ease-out;
+}
+.U h1{
+    color:white;
+    transition: opacity 1.5s ease-out;
+    letter-spacing:-5px;
+    z-index: 3;
+    font-size: 80px;
+}
+#bigger_goals{
+    display: none;
+    letter-spacing:-5px;
+    z-index: 3;
+    font-size: 80px;
+    transition: opacity 2s ease-in;
+}
+.main1{
+    width: 100%;
+    height: 100%;
+    background-color: #0f111f;
+}
+
+.desc{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%); 
+}
+.desc p{
+    color: white;
+    font-size: 32px;
+    font-family:fantasy;
+    letter-spacing: 1.3px;
+    text-align: center; 
+}
+.desc button{
+    width: 8rem;
+    font-size: 90%;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    background-color: rgb(188, 80, 235);
+    backdrop-filter: blur(8px);
+    border: none;
+    cursor: pointer;
+}
+.download1:hover{
+    background-color: rgb(174, 44, 155);
+    box-shadow: rgb(159, 77, 161) 0px 20px 30px -10px;
+}
+.main_full{
+    width: 100%;
+    height: fit-content;
+}
+.overview{
+    width: 100%;
+    position: relative;
+    height:fit-content
+}
+.overview h1{
+    width: 20%;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    color: rgb(174, 44, 155);
+    font-size: 17px;
+    text-shadow: 0 0 10px #ffffff93;
+}
+.overview .desc_overview{
+    color: white;
+    /* background-color: aqua; */
+    font-family: "Hind Siliguri", sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    width: 600px;
+    line-height: 60px;
+    margin: 30px;
+}
+.overview_cards{
+    display: flex;
+    flex-direction: column;
+}
+.overview_cards img{
+    width: 300px;
+    transition: transform 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 19px 38px, rgba(0, 0, 0, 0.32) 0px 15px 22px;
+}
+.overview_cards img:hover{
+    box-shadow: rgba(207, 204, 204, 0.236) 0px 19px 38px, rgba(0, 0, 0, 0.32) 0px 15px 22px;
+    transform: scale(1.05);
+}
+
+.overview_cards h3,p{
+    margin: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+.overview_cards h3{
+    font-size: 24px;
+    font-weight: 700;
+}
+.overview_cards .overview_card1{
+    /* background-color: aqua; */
+    width: 600px;
+    margin: 40px;
+}
+.overview_card1 img{
+    width: 100%;
+    overflow: hidden;
+}
+
+.card12{
+    display: flex;
+    gap: 100px;
+}
+.overview_cards .overview_card2{
+    /* background-color: aqua; */
+    width: 600px;
+}
+.overview_card2 img{
+    height: 700px;
+    width: 100%;   
+    object-fit: cover;
+}
+
+.overview .in_list{
+    color: white;
+    margin: 30px;
+    width: 300px;
+    position: relative;
+    top: 200px;
+    left: 10%;
+}
+.in_list p{
+    width: 300px;
+    font-size: 26px;
+    position: relative;
+}
+.in_list ul{
+    margin-top: 20px;
+    list-style:none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.in_list ul a{
+    text-decoration: none;
+    color: rgb(174, 44, 155);
+    font-weight: 700;
+    font-size: 20px;
+}
+.in_list ul a:hover{
+    text-shadow: 0 0 10px #ffffff93;
+}
+.overview_cards .overview_card3{
+    width: 600px;
+    position: relative;
+    top: -150px;
+    margin-left: 650px;
+}
+.overview_card3 img{
+    width: 700px;
+    height: 80%;
+    object-fit: cover;
+}
+.overview_card3 .cthree{
+    margin-top: 30px;
+    width: 700px;
+}
+.wukong{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.wukong h2{
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+.wukong img{
+    width: 800px;
+    object-fit: cover;
+    margin: 40px;
+}
+.wukong p{
+    width: 700px;
+    color: white;
+    font-size: 20px;
+    text-align: center; 
+}
+.wukong .overview_button{
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+}
+.overview_button button{
+    width: 100px;
+    height: 50px;
+    font-size: 15px;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1.5px solid rgb(170, 25, 131);
+}
+.overview_button button:hover{
+    box-shadow: rgb(182, 101, 233) 0px 0px 18px;
+}
+
+.key_heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.key_features{
+    position: relative;
+    top: 90px;
+    width: 100%;
+    height:fit-content
+}
+.key_features .key_name{
+    color: rgb(140, 31, 137);
+    width: 100%;
+    font-size: 20px;
+    letter-spacing: 1.3px;
+    text-align: center;
+    text-shadow: 0 0 10px #ffffff93;
+}
+.key_features .key_mainH{
+    color: white;
+    font-weight: 800;
+    width: 100%;
+    margin-top: 30px;
+    font-size: 50px;
+    text-align: center;
+}
+.key_features .key_desc{
+    width: 100%;
+    text-align: center;
+    padding:2% 30%;
+    font-size: 18px;
+}
+.key_features .key_buttton{
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+}
+.key_buttton button{
+    width: 150px;
+    height: 50px;
+    font-size: 15px;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1.5px solid rgb(170, 25, 131);
+}
+.key_buttton button:hover{
+    box-shadow: rgb(182, 101, 233) 0px 0px 18px;
+}
+.key_cards{
+    position: relative;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+}
+.key_cards .card1{
+    display: flex;
+    gap: 50px;
+}
+.CLICK{
+    position: absolute;
+    left: 50%;
+    color: #0e133b !important;
+}
+.key_cards .content{
+    /* background-color: aqua; */
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.key_cards h3{
+    background-color: rgba(171, 74, 180, 0.973);
+    color: black;
+    width: fit-content;
+    padding: 2px;
+    box-shadow: rgb(182, 101, 233) 0px 0px 18px;
+}
+.key_cards h2{
+  color: white;
+  padding: 5px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+}
+.key_cards p{
+    font-size: 18px;
+    text-align: left;
+    font-weight:500;
+    color: rgb(128, 128, 128);
+}
+.key_cards img{
+    width: 800px;
+    margin-right: 50px;
+    margin-left: 50px;
+    transition: transform 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 19px 38px, rgba(0, 0, 0, 0.32) 0px 15px 22px;
+}
+.key_cards img:hover{
+    box-shadow: rgba(207, 204, 204, 0.236) 0px 19px 38px, rgba(0, 0, 0, 0.32) 0px 15px 22px;
+    transform: scale(1.05);
+}
+
+.key_cards .card2{
+    margin-top: 70px;
+    display: flex;
+}
+.card2 p{
+    color: rgba(255, 255, 255, 0.603);
+}
+
+.key_cards .card3{
+    margin-top: 70px;
+    display: flex;
+}
+.key_cards .card4{
+    margin-top: 70px;
+    display: flex;
+}
+.card4 p{
+    color: rgba(255, 255, 255, 0.603);
+}
+
+.key_cards .card5{
+    margin-top: 70px;
+    display: flex;
+}
+.sample_project{
+    position: relative;
+    width: 100%;
+    height:fit-content;
+    margin-top: 20%;
+}
+
+.sample_project .pro_cards{
+    width: 100%;
+    position: relative;
+    top: 150px;
+    margin-left: 10px;
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+}
+.pro_cards .image_place{
+    width: 100%;
+    overflow: hidden;
+}
+.pro_cards .content{
+    height:500px;
+    /* background-color: #366969; */
+}
+.pro_cards img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 0px;
+    transition: 0.3s;
+    opacity: 1;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+.pro_cards .card1{
+    /* background-color: aqua; */
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+.pro_cards h2{
+    position: relative;
+    top: 20px;
+    color:rgb(140, 31, 137);
+    text-shadow: 0 0 10px #ffffff93;
+}
+.pro_cards p{
+    position: relative;
+    top: 20px;
+    text-align: left;
+    color: rgba(255, 249, 249, 0.849);
+    font-size: 18px;
+    left: -10px;
+    font-weight: 500;
+}
+
+.pro_cards .card2{
+    /* background-color: aqua; */
+    width: 400px;
+    /* background-color: aqua; */
+}
+.pro_cards .card3{
+    /* background-color: aqua; */
+    width: 400px;
+    /* background-color: aqua; */
+
+}
+.pro_cards img:hover{
+    transition: transform 0.5s;
+    transition-behavior: normal;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    transition-property: transform;
+    transform: scale(1.1);
+}
+
+.but{
+    position: relative;
+    top: 200px;
+    display: flex;
+    width: 100%;
+    justify-content: space-around
+}
+.but button{
+    width: 150px;
+    height: 50px;
+    font-size: 15px;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1.5px solid rgb(170, 25, 131);
+}
+.but button:hover{
+    box-shadow: rgb(182, 101, 233) 0px 0px 18px;
+}
+.get_started{
+    width: 100%;
+    height: 800px;
+    background-color: rgb(182, 101, 233);
+}
+.get_started .heading{
+    color: black;
+    letter-spacing: 1px;
+    position: relative;
+    top: 30px;
+    left:60px;
+}
+.get_started .des{
+    position: relative;
+    width: 250px;
+    top: 100px;
+    color: black;
+    left: 60px;
+    font-size: 45px;
+    font-weight: 700;
+    float: left;
+}
+.get_started .cards{
+    display: flex;
+    margin-top: 100px;
+    margin-left: 600px;
+    margin-right: 50px;
+}
+.get_started .cards .card1{
+    height: 500px;
+    width: 600px;
+    cursor: pointer;
+    margin-left: 50px;
+    border: 4px solid white;
+}
+.get_started .cards .card1 h5{
+    height: 30%;
+    /* background-color: aquamarine; */
+    display: flex;
+    margin-left: 40px;
+    align-items: center;
+    font-size: 15px;
+}
+.get_started .cards .card1 h2{
+    font-size: 30px;
+    margin-left: 40px;
+    /* margin-top: 50px; */
+}
+.get_started .cards .card1 p{
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-right: 50px;
+    color: black;
+}
+.get_started .cards .card1:hover{
+    background-color: white;
+}
+.resources {
+    width: 100%;
+    height: 100%;
+}
+.resources .heading{
+    color: rgb(182, 101, 233);
+    margin: 70px 0 20px 40px;
+    letter-spacing: 1px;
+}
+.resources .about{
+    color: white;
+    /* background-color: aqua; */
+    width: 360px;
+    margin-left: 40px;
+    font-size: 45px;
+    font-weight: 700;
+}
+.resources .extra{
+    width: 360px;
+    white-space: 1px;
+    line-height: 28px;
+    float: left;
+    color: rgba(235, 229, 229, 0.623);
+    margin-top: 40px;
+    margin-left: 40px;
+}
+.resources .cards{
+    /* background-color: aqua; */
+    display: flex;
+    margin-left: 50%;
+    gap: 40px;
+}
+.resources .cards .card1{
+    border:  4px solid rgb(182, 101, 233);
+    width: 300px;
+    cursor: pointer;
+    height: 300px;
+}
+.resources .cards .card1 h3{
+    height: 100px;
+    /* background-color: aquamarine; */
+    display: flex;
+    letter-spacing: 1px;
+    color: white;
+    margin-left: 40px;
+    align-items: center;
+    font-size: 15px;
+}
+.resources .cards .card1 h2{
+    display: flex;
+    letter-spacing: 1px;
+    color: white;
+    margin-left: 40px;
+    align-items: center;
+}
+.resources .cards .card1 p{
+    display: flex;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.449);
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-right: 50px;
+    align-items: center;
+    font-size: 15px;
+    /* background-color: aqua; */
+}
+.resources .cards .card1:hover{
+    background-color:  rgb(182, 101, 233);
+}
+.resources .see_all{
+    color:  white;
+    cursor: pointer;
+    position: relative;
+    left: 90%;
+    margin-top: 50px;
+    letter-spacing: 1px;
+    background-color:  rgb(182, 101, 233);
+    width: 100px;    
+    text-align: center;
+    padding: 4px;
+}
+.resources .see_all:hover{
+    box-shadow: rgb(182, 101, 233) 0px 0px 18px;
+}
+.resources .community{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+}
+.resources .community .left_down{
+    margin-top: 115px;
+}
+.resources .community h4{
+    letter-spacing: 1px;
+    color: white;
+    width: 400px;
+    margin:50px 0 0 40px;
+}
+.resources .community h1{
+    width: 500px;
+    color: white;
+    margin: 20px 0 0 40px;
+}
+.resources .community p{
+    margin: 20px 0 0 40px;
+    color: rgba(255, 255, 255, 0.49);
+    line-height: 30px;
+    width:400px
+}
+.resources .community button{
+    width: 150px;
+    height: 50px;
+    font-size: 15px;
+    margin: 30px 0 0 120px;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1.5px solid rgb(170, 25, 131);
+    float: left;
+}
+.community button:hover{
+    box-shadow: rgb(182, 101, 233) 0px 0px 18px;
+}
+.community img{
+    margin-top: 40px;
+    margin-left: 50px;
+    width: 800px;
+}
+.search_bar_big{
+    width: 80%;
+    margin: 70px 0px 0 150px;
+    border: 1px solid white;
+}
+.search_bar_big input{
+    width: 100%;
+    height: 20%;
+    padding: 10px;
+    border: none;
+    background-color:rgba(0, 0, 0, 0.397);
+}
+
+
+.game_product{
+    width: 100%;
+    height: fit-content;
+}
+.game_product h1{
+    color: rgba(221, 212, 212, 0.914);
+    margin: 50px 0 10px 50px;
+}
+.game_product .line{
+    width: 80%;
+    margin-left: 20px;
+    margin-right: 10%;
+}
+.game_product .product_list{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    margin-top: 40px;
+    justify-content: space-around;
+}
+.game_product .product_list .product1{
+   border: 1px solid white;
+   width: 600px;
+   background-image: url(images/person1.jpg);
+   background-repeat: no-repeat;
+   background-position: left;
+   justify-content: center;
+   background-size: cover;
+   opacity: 0.6;
+}
+.game_product .product_list .product2{
+    border: 1px solid white;
+    width: 600px;
+    background-image: url(images/person2.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+    justify-content: center;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.7), 0 4px 20px rgba(0,0,0,0.4);
+    background-size: cover;
+    opacity: 0.6;
+}
+.game_product .product_list  .box{
+    margin: 30px;
+    /* border: 1px solid white; */
+    display: flex;
+    flex-direction: column;
+    /* background-color: aqua; */
+    opacity: 1 !important;
+}
+
+.game_product .product_list .box h3{
+    /* background-color: aqua; */
+    text-align: center;
+    color: rgb(192, 21, 21);
+    margin-top: 40px;
+    opacity: 1 !important;
+}
+.game_product .product_list .box h1{
+    /* background-color: aqua; */
+    width: 300px;
+    text-align: center;
+    margin-left: 120px;
+    color: rgb(121, 107, 107);
+}
+.game_product .product_list  .box h1:hover{
+    color: rgb(170, 25, 131);
+}
+.game_product .product_list .box p{
+    margin: 50px 100px 50px 100px;
+    letter-spacing: 1px;
+    color: rgb(170, 25, 131);
+    line-height: 25px;
+    font-weight: 600;
+}
+.game_product .product_list  .box button{
+    width: 150px;
+    height: 50px;
+    font-size: 15px;
+    margin-left: 35%;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1.5px solid rgb(170, 25, 131);
+}
+.game_product .product_list  .box button:hover{
+    box-shadow: rgb(182, 101, 233) 0px 0px 18px;
+}
+.game_product .product_list .box .buttton2{
+    margin-top: 115px;
+}
+footer{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+footer .icons{
+    margin: 50px 0 0 50px;
+    padding-top: 50px;
+    display: flex;
+    gap: 10px;
+    /* background-color: aqua; */
+}
+.icons i{
+    font-size: 35px;
+    font-weight: 400;
+    color: white;
+    opacity: 0.8;
+    object-fit: contain;
+    mix-blend-mode:screen;
+    cursor: pointer;
+}
+footer .fcontent{
+    display: flex;
+    color: white;
+    justify-content: space-around;
+    margin-top:50px;
+    width: 100%;
+    height: fit-content;
+}
+.fcontent ul{
+    list-style: none;
+    line-height: 25px;
+    color: rgb(170, 25, 131);
+}
+.fcontent ul li{
+    cursor: pointer;
+    color: white;
+}
+.fcontent ul li:hover{
+    color: rgb(170, 25, 131);
+}
+
+footer .last p{
+    margin: 20px 0 0 50px;
+    font-size: 15px;
+}
+footer .last_ui{
+    list-style: none;
+    color: white;
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+    margin-left: 50px;
+}
+.last_ui li:hover{
+    color: rgb(170, 25, 131);
+}
+footer .end_logo{
+    display: flex;
+    /* background-color: aqua; */
+    justify-content: end; 
+    margin-right: 50px;
+    gap: 40px;
+}
+footer .end_logo img{
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    background: rgb(7, 7, 7);
+    transition:0.3s ease-out;
+}
+footer .end_logo img:hover{
+    background: rgb(38, 187, 255);
+}
